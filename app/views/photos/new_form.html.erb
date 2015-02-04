@@ -1,6 +1,7 @@
 <h1>Add A New Photo</h1>
 
-<form action="/create_photo">
+<!-- <form action="/create_photo" method="post"> -->
+<%= form_tag "/photos", :method => "post" do %>
   <div>
     <label for="source">Source</label>
     <input type="text" name="source" id="source">
@@ -11,4 +12,6 @@
   </div>
 
   <input type="submit" value="Add Photo">
-</form>
+<% end %>
+<!-- </form> -->
+

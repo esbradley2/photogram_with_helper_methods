@@ -5,3 +5,5 @@
 <p><%= @photo.caption %></p>
 
 <a href="/photos">Go back</a>
+
+<%= link_to "Delete this photo", "http://localhost:3000/photos/#{@photo.id}", :method => 'delete' %>

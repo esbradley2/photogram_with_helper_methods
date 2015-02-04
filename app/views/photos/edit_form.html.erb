@@ -1,6 +1,7 @@
 <h1>Edit Photo</h1>
 
-<form action="/update_photo/<%= @photo.id %>">
+<!-- <form action="/update_photo/<%= @photo.id %>"> -->
+<%= form_tag "/photos/#{@photo.id}", :method => "patch" do %>
   <div>
     <label for="source">Source</label>
     <input type="text" name="source" id="source" value="<%= @photo.source %>">
@@ -11,4 +12,5 @@
   </div>
 
   <input type="submit" value="Update Photo">
-</form>
+<% end %>
+<!-- </form> -->
