@@ -15,19 +15,31 @@
   <tr>
     <td>
       <img src="<%= photo.source %>" width="80">
+      <%= image_tag photo.source, :width => 80 %>
     </td>
     <td>
       <%= photo.caption %>
     </td>
     <td>
       <a href="http://localhost:3000/photos/<%= photo.id %>">Show</a>
+
+      <%= link_to "Show", "http://localhost:3000/photos/#{photo.id}" %>
     </td>
     <td>
       <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
+
+      <%= link_to "Edit", "http://localhost:3000/photos/#{photo.id}/edit" %>
     </td>
     <td>
       <a href="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
+
+      <%= link_to "Delete", "http://localhost:3000/delete_photo/#{photo.id}", :data => { :confirm => "Are you suuuuure?" } %>
     </td>
   </tr>
   <% end %>
+
+
+
+
+
 </table>
